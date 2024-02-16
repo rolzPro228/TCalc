@@ -223,23 +223,6 @@
                                     <action selector="showCalculationsList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DoJ-eK-o58"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Число π с точностью до знака:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-2x-rQQ">
-                                <rect key="frame" x="16" y="232.66666666666666" width="361" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tl-i4-Qxg">
-                                <rect key="frame" x="16" y="190.66666666666666" width="361" height="34"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Показать π с точностью до знака"/>
-                                <connections>
-                                    <action selector="piButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfI-k9-bs0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -272,8 +255,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eG9-pK-hxH" secondAttribute="trailing" id="G6j-Nd-6Yp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="290-vO-QTw" secondAttribute="trailing" id="HNk-xi-rvI"/>
                             <constraint firstItem="4oY-d1-DgD" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.13" id="ItQ-8I-iBk"/>
-                            <constraint firstItem="9Et-2x-rQQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JAN-wk-KKY"/>
-                            <constraint firstItem="6tl-i4-Qxg" firstAttribute="bottom" secondItem="9Et-2x-rQQ" secondAttribute="top" constant="-8" id="JjI-bI-xig"/>
                             <constraint firstItem="Y5K-lt-Zxv" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.13" id="Jkt-ld-41G"/>
                             <constraint firstItem="eG9-pK-hxH" firstAttribute="bottom" secondItem="Yh2-KD-R1p" secondAttribute="top" id="Jv5-iu-Xpk"/>
                             <constraint firstItem="5TT-ln-2HQ" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.13" id="LBC-df-LQM"/>
@@ -294,8 +275,6 @@
                             <constraint firstItem="iYJ-Ht-Blz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aux-Ur-uLA"/>
                             <constraint firstItem="thC-Kj-qIg" firstAttribute="bottom" secondItem="64J-ax-V39" secondAttribute="top" constant="-20" id="cVC-wF-cfu"/>
                             <constraint firstItem="Yh2-KD-R1p" firstAttribute="bottom" secondItem="290-vO-QTw" secondAttribute="top" id="dh1-jN-H7b"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4oY-d1-DgD" secondAttribute="trailing" id="drg-fM-eAi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="549-cL-xzW" secondAttribute="leading" id="fTL-ha-b4F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="liU-j8-bcw" secondAttribute="trailing" id="fcV-eR-lYN"/>
                             <constraint firstItem="HxM-ca-Tvo" firstAttribute="leading" secondItem="hWW-Gb-bX8" secondAttribute="trailing" id="gbL-75-KCP"/>
                             <constraint firstItem="SQd-A3-UsJ" firstAttribute="leading" secondItem="549-cL-xzW" secondAttribute="trailing" id="gmc-86-Dwe"/>
@@ -316,7 +295,6 @@
                             <constraint firstItem="290-vO-QTw" firstAttribute="leading" secondItem="Y5K-lt-Zxv" secondAttribute="trailing" id="qO5-d6-4eb"/>
                             <constraint firstItem="SQd-A3-UsJ" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.129996" id="qyO-UB-tS5"/>
                             <constraint firstItem="HxM-ca-Tvo" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.13" id="rab-Wt-8ka"/>
-                            <constraint firstItem="9Et-2x-rQQ" firstAttribute="bottom" secondItem="thC-Kj-qIg" secondAttribute="top" constant="-8" id="rgt-Yz-hyW"/>
                             <constraint firstItem="Slr-jp-EIa" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.13" id="tSn-sd-KtH"/>
                             <constraint firstItem="Y5K-lt-Zxv" firstAttribute="bottom" secondItem="SQd-A3-UsJ" secondAttribute="top" id="ucT-2m-Afv"/>
                             <constraint firstItem="eG9-pK-hxH" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.13" id="v6g-UD-GYT"/>
@@ -328,14 +306,12 @@
                             <constraint firstItem="8g0-HW-pWa" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.25" id="yxi-KV-TZb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SQd-A3-UsJ" secondAttribute="bottom" id="zQ7-7i-tQC"/>
                             <constraint firstItem="liU-j8-bcw" firstAttribute="bottom" secondItem="eG9-pK-hxH" secondAttribute="top" id="zS8-LW-ZO1"/>
-                            <constraint firstItem="6tl-i4-Qxg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ze2-Vb-gXo"/>
                             <constraint firstItem="iYJ-Ht-Blz" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.13" id="zrw-fF-03K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Калькулятор" id="UiG-fb-fLo"/>
                     <connections>
                         <outlet property="label" destination="thC-Kj-qIg" id="3Dt-g6-lEu"/>
-                        <outlet property="piLabel" destination="9Et-2x-rQQ" id="GKh-NB-hbg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

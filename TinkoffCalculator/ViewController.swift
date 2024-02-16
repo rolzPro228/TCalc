@@ -64,7 +64,6 @@ final class ViewController: UIViewController {
     
     @IBOutlet private weak var label: UILabel!
     
-    @IBOutlet weak var piLabel: UILabel!
     private lazy var numberFormatter: NumberFormatter = {
         let numFormatter = NumberFormatter()
         
@@ -88,7 +87,6 @@ final class ViewController: UIViewController {
     
 //    MARK: Listeners
     @IBAction private func buttonPressed(_ sender: UIButton) {
-        self.piLabel.isHidden = true
         guard let buttonText = sender.currentTitle else { return }
         
         if buttonText == self.comma && self.label.text?.contains(self.comma) == true {
@@ -108,7 +106,6 @@ final class ViewController: UIViewController {
     }
     
     @IBAction private func operationButtonPressed(_ sender: UIButton) {
-        self.piLabel.isHidden = true
         if case .operation(_) = self.calculationHistory.last {
             self.calculationHistory.removeLast()
         } else {
@@ -120,7 +117,6 @@ final class ViewController: UIViewController {
     }
     
     @IBAction private func calculateButtonPressed(_ sender: UIButton) {
-        self.piLabel.isHidden = true
         self.appendNumberFromLabelToHistory()
         do {
             let result = try self.calculate()
@@ -145,27 +141,8 @@ final class ViewController: UIViewController {
     }
     
     
-    @IBAction private func piButtonPressed(_ sender: UIButton) {
-        
-        self.calculationHistory.removeAll()
-        
-        let txt = self.label.text ?? "0"
-        let number = Int(Double(txt) ?? 0) 
-        
-        if number <= 2 {
-            print("Ошибка")
-        } else {
-            self.pi(numberOfDigits: number) { result in
-                self.label.text = result
-            }
-        }
-        self.piLabel.isHidden = false
-        self.isCalculationEnded = true
-    }
-    
     @IBAction private func clearButtonPressed(_ sender: UIButton) {
         calculationHistory.removeAll()
-        self.piLabel.isHidden = true
         self.resetLabelText()
     }
     
@@ -219,56 +196,6 @@ final class ViewController: UIViewController {
     
     private func resetLabelText() {
         self.label.text = "0"
-    }
-    
-    private func pi(numberOfDigits: Int, closure: (String) -> ()) {
-        var result = ""
-        let len = 10 * numberOfDigits / 3
-        DispatchQueue.global(qos: .background).sync {
-            var q, x: Int
-            var nines = 0
-            var predigit = 0
-            var a: [Int] = Array(repeating: 2, count: len)
-            
-            for _ in 1...numberOfDigits {
-                q = 0
-                for index in stride(from: len, to: 0, by: -1) {
-                    x = 10 * a[index-1] + q * index
-                    a[index-1] = x % (2 * index - 1)
-                    q = x / (2 * index - 1)
-                }
-                
-                a[0] = q % 10
-                q = q / 10
-                if q == 9 {
-                    nines += 1
-                } else if q == 10 {
-                    result.append("\(predigit + 1)")
-                    if nines != 0 {
-                        for _ in 1...nines {
-                            result.append("0")
-                        }
-                    }
-                    predigit = 0
-                    nines = 0
-                } else {
-                    result.append("\(predigit)")
-                    predigit = q
-                    if nines != 0 {
-                        for _ in 1...nines {
-                            result.append("9")
-                        }
-                        nines = 0
-                    }
-                }
-            }
-            print("predigit: \(result.count)")
-            result.append("\(predigit)")
-            result = String(result.dropFirst())
-            result = "3,\(result.dropFirst())"
-            print(result)
-            closure(result)
-        }
     }
 }
 

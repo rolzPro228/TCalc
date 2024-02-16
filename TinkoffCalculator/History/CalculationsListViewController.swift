@@ -53,7 +53,7 @@ extension CalculationsListViewController: UITableViewDelegate {
         }
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy HH:mm"
+        formatter.dateFormat = "dd.MM.yyyy"
         let date = calculations[section].date
         let formattedDate = formatter.string(from: date)
         header.configure(with: formattedDate)
